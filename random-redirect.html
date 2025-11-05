@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Redirect</title>
+  <script>
+    // List your two URLs here
+    const urls = [
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll 😈
+      "https://www.youtube.com/watch?v=ysz5S6PUM-U"  // Good video 😇
+    ];
+
+    // Random 50-50 selection
+    window.onload = () => {
+      const randomIndex = Math.floor(Math.random() * urls.length);
+      window.location.href = urls[randomIndex];
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you to a random surprise... 🎲</p>
+</body>
+</html>
