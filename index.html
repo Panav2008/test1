@@ -28,7 +28,7 @@
     h1 {
       font-size: 3rem;
       letter-spacing: 1px;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.3em;
       text-shadow: 0 0 10px rgba(255,255,255,0.3);
     }
 
@@ -45,7 +45,7 @@
       color: white;
       padding: 1em 2em;
       border-radius: 50px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -76,6 +76,12 @@
       color: #90a4ae;
       margin-top: 0.5em;
     }
+
+    .intro {
+      margin-bottom: 1.5em;
+      font-size: 1.1rem;
+      color: #e0f7fa;
+    }
   </style>
 </head>
 <body>
@@ -83,8 +89,8 @@
   <h1>🎆 Equinox 2025 🎆</h1>
   <h2>Hosted by The Chemical Science Society</h2>
 
-  <p>Welcome to the mystery zone! Click below for your surprise 🎲</p>
-  <br />
+  <p class="intro">Welcome to the mystery zone! Click the button below to discover your fate... 🎲</p>
+  
   <button onclick="reveal()">Reveal My Fate</button>
 
   <div class="footer">
@@ -96,12 +102,18 @@
     function reveal() {
       const urls = [
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll 😈
-        "https://www.youtube.com/watch?v=ysz5S6PUM-U"  // Good video 😇 (replace if you like)
+        "https://www.youtube.com/watch?v=ysz5S6PUM-U"  // Good video 😇
       ];
+
       const randomIndex = Math.floor(Math.random() * urls.length);
-      window.location.href = urls[randomIndex];
+      const chosen = urls[randomIndex];
+
+      // Add a fun delay for suspense
+      document.querySelector("button").innerText = "Analyzing molecules... 🔬";
+      setTimeout(() => {
+        window.location.href = chosen;
+      }, 2000);
     }
   </script>
 </body>
-</html>
-
+</html
