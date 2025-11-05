@@ -1,24 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Redirect</title>
-  <script>
-    // List your two URLs here
-    const urls = [
-      "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll 😈
-      "https://www.youtube.com/@BehindtheLabel-hi2dl"  // Good video 😇
-    ];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equinox | The Chemical Science Society</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-    // Random 50-50 selection
-    window.onload = () => {
-      const randomIndex = Math.floor(Math.random() * urls.length);
-      window.location.href = urls[randomIndex];
-    };
-  </script>
+    body {
+      background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px rgba(255,255,255,0.3);
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #cfd8dc;
+      margin-bottom: 2em;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      padding: 1em 2em;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #00c6ff;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9rem;
+      color: #b0bec5;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/tiny-stars.png') repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .credits {
+      font-size: 0.8rem;
+      color: #90a4ae;
+      margin-top: 0.5em;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting you to a random surprise... 🎲</p>
+  <div class="stars"></div>
+  <h1>🎆 Equinox 2025 🎆</h1>
+  <h2>Hosted by The Chemical Science Society</h2>
+
+  <p>Welcome to the mystery zone! Click below for your surprise 🎲</p>
+  <br />
+  <button onclick="reveal()">Reveal My Fate</button>
+
+  <div class="footer">
+    © 2025 The Chemical Science Society | Fest Edition<br>
+    <span class="credits">Created with ❤️ for fun & science</span>
+  </div>
+
+  <script>
+    function reveal() {
+      const urls = [
+        "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll 😈
+        "https://www.youtube.com/watch?v=ysz5S6PUM-U"  // Good video 😇 (replace if you like)
+      ];
+      const randomIndex = Math.floor(Math.random() * urls.length);
+      window.location.href = urls[randomIndex];
+    }
+  </script>
 </body>
 </html>
+
