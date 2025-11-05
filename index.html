@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Equinox | The Chemical Science Society</title>
+  <title>Equinox | Decode the Chemistry</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,7 +14,7 @@
     }
 
     body {
-      background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+      background: radial-gradient(circle at center, #182848, #4b6cb7);
       color: white;
       display: flex;
       flex-direction: column;
@@ -25,18 +25,32 @@
       overflow: hidden;
     }
 
+    .logo {
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1em;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
     h1 {
-      font-size: 3rem;
-      letter-spacing: 1px;
-      margin-bottom: 0.3em;
+      font-size: 2.6rem;
+      margin-bottom: 0.2em;
       text-shadow: 0 0 10px rgba(255,255,255,0.3);
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       font-weight: 400;
       color: #cfd8dc;
       margin-bottom: 2em;
+    }
+
+    .intro {
+      margin-bottom: 1.5em;
+      font-size: 1.1rem;
+      color: #e0f7fa;
+      max-width: 500px;
     }
 
     button {
@@ -60,15 +74,7 @@
       bottom: 20px;
       font-size: 0.9rem;
       color: #b0bec5;
-    }
-
-    .stars {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: transparent url('https://www.transparenttextures.com/patterns/tiny-stars.png') repeat;
-      opacity: 0.2;
-      z-index: -1;
+      text-align: center;
     }
 
     .credits {
@@ -77,43 +83,57 @@
       margin-top: 0.5em;
     }
 
-    .intro {
-      margin-bottom: 1.5em;
-      font-size: 1.1rem;
-      color: #e0f7fa;
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      opacity: 0.15;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
   <div class="stars"></div>
-  <h1>🎆 Behind The Labels 🎆</h1>
+
+  <!-- Optional logo (replace src with your fest logo if available) -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Chemical_symbol.svg/240px-Chemical_symbol.svg.png" alt="Chemical Society Logo" class="logo">
+
+  <h1>Equinox 2025</h1>
   <h2>Hosted by The Chemical Science Society</h2>
 
-  <p class="intro">Welcome to the mystery zone! Click the button below to discover your fate... 🎲</p>
-  
-  <button onclick="reveal()">Reveal My Fate</button>
+  <p class="intro">
+    🎭 Welcome to <strong>“Decode the Chemistry”</strong> — where science meets fun!  
+    Tap the button below to reveal your chemical fate... will it be enlightening or... unexpected?
+  </p>
+
+  <button onclick="reveal()">Reveal My Fate 🔬</button>
 
   <div class="footer">
-    © 2025 The Chemical Science Society | Fest Edition<br>
-    <span class="credits">Created with ❤️ for fun & science</span>
+    © 2025 The Chemical Science Society | Equinox Fest<br>
+    <span class="credits">Awareness through curiosity 💡</span>
   </div>
 
   <script>
     function reveal() {
+      // 50/50 chance between awareness & rickroll
       const urls = [
         "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Rickroll 😈
-        "https://www.youtube.com/watch?v=ysz5S6PUM-U"  // Good video 😇
+        "https://i.imgur.com/ghS0A9U.jpg"  // Awareness image (replace with your real event photo or video)
       ];
 
       const randomIndex = Math.floor(Math.random() * urls.length);
       const chosen = urls[randomIndex];
 
-      // Add a fun delay for suspense
-      document.querySelector("button").innerText = "Analyzing molecules... 🔬";
+      // Add a suspense delay
+      const button = document.querySelector("button");
+      button.innerText = "Analyzing chemical reactions... 🧪";
+      button.disabled = true;
+
       setTimeout(() => {
         window.location.href = chosen;
-      }, 2000);
+      }, 2500);
     }
   </script>
 </body>
-</html
+</html>
